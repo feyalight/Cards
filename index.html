@@ -2,26 +2,32 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#2b6b3c">
+<meta property="og:title" content="Фикус Мелани — памятка по уходу">
+<meta property="og:description" content="Полив, свет, температура, формирование и диагностика">
 <title>Фикус Мелани — памятка</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f5ef;min-height:100vh;padding:16px;display:flex;justify-content:center}
-  .fc{background:#fff;border-radius:24px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08)}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f5ef;padding:16px;display:flex;justify-content:center;min-height:100vh}
+  .fc{background:#fff;border-radius:24px;width:100%;max-width:420px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.08);height:fit-content}
   .fc-head{background:#2b6b3c;padding:20px 20px 14px;text-align:center;color:#fff}
   .fc-head h1{margin:0 0 4px;font-size:22px;font-weight:700;letter-spacing:-0.3px}
   .fc-head .sub{font-size:13px;opacity:0.75;margin-bottom:10px}
+  .fc-head .tagline{font-size:12px;opacity:0.65;margin-top:8px;font-style:italic;line-height:1.4}
   .badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
   .badge{font-size:12px;font-weight:600;padding:5px 14px;border-radius:999px}
   .badge-org{background:#f0a94e;color:#5a3700}
   .badge-red{background:#e05a50;color:#fff}
-  .fc-body{padding:14px 16px}
+  .fc-body{padding:14px 16px 4px}
   .block{border-radius:14px;padding:12px 14px;margin-bottom:10px}
   .block-red{background:#fdf0ee;border-left:4px solid #e05a50}
   .block-yellow{background:#fdfaea;border-left:4px solid #e8c44e}
   .block-green{background:#eef8ee;border-left:4px solid #5cb86b}
   .block-blue{background:#eaf3fb;border-left:4px solid #5b9bd5}
   .block-purple{background:#f2eefb;border-left:4px solid #9b7fd4}
+  .block-teal{background:#eafaf6;border-left:4px solid #4caf8f}
+  .block-brown{background:#fdf5ee;border-left:4px solid #c4914e}
   .block-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;opacity:0.6}
   .row{display:flex;align-items:flex-start;gap:8px;padding:4px 0;font-size:13.5px;line-height:1.45}
   .row+.row{border-top:1px solid rgba(0,0,0,0.05)}
@@ -30,50 +36,59 @@
   .kv+.kv{border-top:1px dashed rgba(0,0,0,0.1)}
   .kv b{font-weight:600;color:#2b6b3c;white-space:nowrap}
   .kv span{text-align:right;color:#3b3f38}
+  .tip{font-size:12px;color:#2b6b3c;background:rgba(43,107,60,0.07);border-radius:10px;padding:8px 10px;margin-top:8px;line-height:1.45;font-weight:500}
   .poliv-inner{display:flex;gap:8px;margin-top:4px;align-items:stretch}
   .poliv-seasons{flex:1;display:flex;flex-direction:column}
   .poliv-season{flex:1;display:flex;align-items:center;padding:6px 0}
   .poliv-season+.poliv-season{border-top:1px dashed rgba(0,0,0,0.1)}
   .seas-t{font-weight:700;font-size:13px;color:#2b6b3c}
-  .poliv-drain{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:rgba(91,155,213,0.12);border-radius:10px;padding:10px 8px;width:96px;flex-shrink:0;gap:4px}
-  .poliv-drain-label{font-size:11px;color:#2b6b3c;font-weight:600;line-height:1.3}
-  .poliv-drain-val{font-size:12px;color:#3b3f38;line-height:1.3}
+  .drain2{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:rgba(91,155,213,0.12);border-radius:10px;padding:8px;width:96px;flex-shrink:0;gap:3px}
+  .drain2-label{font-size:10px;color:#2b6b3c;font-weight:600;line-height:1.3}
+  .drain2-val{font-size:11.5px;color:#3b3f38;line-height:1.3}
+  .drain2-sep{width:60%;border:none;border-top:1px dashed rgba(0,0,0,0.15);margin:3px 0}
+  .drain2-tag{font-size:10px;color:#5cb86b;font-weight:700}
 </style>
 </head>
 <body>
 <div class="fc">
   <div class="fc-head">
     <h1>Фикус Мелани</h1>
-    <div class="sub">дерево · 50–120 см</div>
+    <div class="sub">дерево · средняя сложность</div>
     <div class="badges">
       <span class="badge badge-org">Уход: 2.5 из 5</span>
       <span class="badge badge-red">Опасность: 2</span>
     </div>
+    <div class="tagline">Требует соблюдения правил ухода и защиты от стресса</div>
   </div>
   <div class="fc-body">
+
     <div class="block block-red">
       <div class="block-title">Табу</div>
-      <div class="row"><span class="ico">🚫</span><span>Залив — главный враг</span></div>
-      <div class="row"><span class="ico">🚫</span><span>Холодные сквозняки (особенно по корням)</span></div>
+      <div class="row"><span class="ico">🚫</span><span>Холодный сквозняк по мокрым корням</span></div>
+      <div class="row"><span class="ico">🚫</span><span>Порционный полив</span></div>
       <div class="row"><span class="ico">🚫</span><span>Резкие перестановки с места на место</span></div>
-      <div class="row"><span class="ico">🚫</span><span>Жар от батарей рядом</span></div>
+      <div class="row"><span class="ico">🚫</span><span>Жар от батарей</span></div>
     </div>
+
     <div class="block block-yellow">
       <div class="block-title">Свет</div>
       <div class="row"><span class="ico">☀️</span><span>Яркий рассеянный, 10–12 часов в день</span></div>
     </div>
+
     <div class="block block-blue">
       <div class="block-title">Температура и влажность</div>
-      <div class="kv"><b>Лето:</b><span>+20…+25°C</span></div>
-      <div class="kv"><b>Зима:</b><span>+16…+18°C (не ниже +15°C)</span></div>
+      <div class="kv"><b>Круглый год:</b><span>+18…+25°C (не ниже +15°C)</span></div>
       <div class="kv"><b>Влажность:</b><span>норм. квартирная (~40%)</span></div>
+      <div class="tip">⚠️ Корни нежные, ультра-чувствительные к холоду — зимой защищать от холодного подоконника, переохлаждение — стресс</div>
     </div>
+
     <div class="block block-blue">
       <div class="block-title">Уход за листьями</div>
-      <div class="kv"><b>Опрыскивать:</b><span>нет</span></div>
       <div class="kv"><b>Протирать листья:</b><span>да, обязательно</span></div>
-      <div class="kv"><b>Тёплый душ:</b><span>1 раз/мес, земля в укрытии</span></div>
+      <div class="kv"><b>Тёплый душ:</b><span>по мере загрязнения</span></div>
+      <div class="kv"><b>Опрыскивать:</b><span>только в жару</span></div>
     </div>
+
     <div class="block block-blue">
       <div class="block-title">Полив — отстоянной водой, обильно</div>
       <div class="poliv-inner">
@@ -81,29 +96,47 @@
           <div class="poliv-season"><span class="seas-t">Лето — сушим на 1/3</span></div>
           <div class="poliv-season"><span class="seas-t">Зима — сушим на 1/2</span></div>
         </div>
-        <div class="poliv-drain">
-          <div class="poliv-drain-label">Слив из поддона</div>
-          <div class="poliv-drain-val">через 20 мин после полива</div>
+        <div class="drain2">
+          <div class="drain2-label">Слив из поддона</div>
+          <div class="drain2-val">через 20 мин</div>
+          <hr class="drain2-sep">
+          <div class="drain2-tag">терпим к просушке</div>
         </div>
       </div>
     </div>
+
     <div class="block block-purple">
       <div class="block-title">Подкормка</div>
-      <div class="kv"><b>Лето:</b><span>1 раз в 2 недели</span></div>
+      <div class="kv"><b>Лето:</b><span>1 раз в месяц</span></div>
       <div class="kv"><b>Зима (растёт под лампой):</b><span>1 раз/мес, ½ дозы</span></div>
       <div class="kv"><b>Зима (спит):</b><span>не кормить</span></div>
     </div>
+
     <div class="block block-green">
       <div class="block-title">Формирование</div>
-      <div class="row"><span class="ico">🔄</span><span>Поворот на 90° раз в 1.5–2 мес.</span></div>
+      <div class="row"><span class="ico">🔄</span><span>Поворот на 90° один раз за лето — частый поворот вызывает стресс</span></div>
       <div class="row"><span class="ico">✂️</span><span>Обрезка макушки на 3–5 междоузлий — только весной. Альтернатива: наклонить ствол мягкой проволокой, после укоренения побега вернуть вертикально</span></div>
     </div>
+
     <div class="block block-red">
       <div class="block-title">Диагностика</div>
-      <div class="row"><span class="ico">🩸</span><span>Любая травма/обрезка → белый латекс. Промокнуть срез салфеткой в ледяной воде</span></div>
-      <div class="row"><span class="ico">🍂</span><span><b>Листопад</b> — застудили, резко переставили или пересушили</span></div>
+      <div class="row"><span class="ico">🩸</span><span>Любая травма/обрезка → белый каучук. Сразу промокнуть срез салфеткой в <b>тёплой</b> воде</span></div>
+      <div class="row"><span class="ico">🍂</span><span><b>Листопад</b> — застудили, переставили, пересушили или резкая смена угла света/комнаты (гормональный стресс)</span></div>
       <div class="row"><span class="ico">🟤</span><span><b>Коричнево-чёрные пятна с жёлтой каймой</b> — залив</span></div>
     </div>
+
+    <div class="block block-brown">
+      <div class="block-title">Горшок и грунт</div>
+      <div class="kv"><b>Горшок:</b><span>классическая форма</span></div>
+      <div class="kv"><b>Грунт:</b><span>40% разрыхлителей</span></div>
+    </div>
+
+    <div class="block block-teal" style="margin-bottom:0">
+      <div class="block-title">О сорте</div>
+      <div class="row"><span class="ico">🌿</span><span>Карликовый сорт, растёт медленно и компактно</span></div>
+      <div class="row"><span class="ico">📏</span><span>Высота: 80–150 см</span></div>
+    </div>
+
   </div>
 </div>
 </body>
